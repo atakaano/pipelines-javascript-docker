@@ -15,3 +15,8 @@ steps:
     repository: '$(imageName)'
     command: 'build'
     Dockerfile: 'app/Dockerfile'
+- task: Docker@2
+  inputs:
+    containerRegistry: 'azure container registry'
+    repository: '$(imageName)'
+    command: 'push'
